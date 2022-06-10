@@ -10,16 +10,16 @@
 package za.ac.cput.Domain;
 
 
-public class student {
+public class Student {
     private String studentId;
     private String email;
     //private Name name;
 
 
     //private constructor
-    private student(){}
+    private Student(){}
 
-    public student(Builder builder) {
+    public Student(Builder builder) {
         this.studentId = builder.studentId;
         this.email = builder.email;
         //this.name = builder.name;
@@ -60,17 +60,17 @@ public class student {
             //return this;
         //}
 
-        public Builder copy(student student) {
+        public Builder copy(Student student) {
             this.studentId = student.studentId;
             this.email = student.email;
-           // this.name = student.name;
+           // this.name = Student.name;
 
             return this;
         }
 
-        public student build() {
+        public Student build() {
 
-            return new student(this);}
+            return new Student(this);}
     }
 
 }

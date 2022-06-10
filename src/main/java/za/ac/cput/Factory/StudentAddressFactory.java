@@ -9,5 +9,15 @@
 
 package za.ac.cput.Factory;
 
+import za.ac.cput.Domain.Address;
+import za.ac.cput.Domain.StudentAddress;
+
 public class StudentAddressFactory {
+
+    public static StudentAddress buildStudentAddress(String studentId, Address address) {
+        return new StudentAddress.Builder()
+                .studentId(studentId)
+                .address(address)
+                .build();
+    }
 }

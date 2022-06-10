@@ -14,6 +14,7 @@ package za.ac.cput.Domain;
 public class Student {
     private String studentId;
     private String email;
+    private Name name;
 
 
     //private constructor
@@ -22,6 +23,7 @@ public class Student {
     public Student(Builder builder) {
         this.studentId = builder.studentId;
         this.email = builder.email;
+        this.name = builder.name;
     }
 
     //Getters, tostring
@@ -29,18 +31,22 @@ public class Student {
 
     public String getEmail() {return email;}
 
+    public Name getName() {return name;}
+
 
     @Override
     public String toString()
     {
         return "Student ID {" + studentId +
                 "}, Email {" + email +
+                "}, Name {" + name +
                 "}";
     }
 
     public static class Builder {
         private String studentId;
         private String email;
+        private Name name;
 
 
         public Builder studentId(String studentId) {
@@ -53,10 +59,16 @@ public class Student {
             return this;
         }
 
+        public Builder name(Name name) {
+            this.name = name;
+            return this;
+        }
+
 
         public Builder copy(Student student) {
             this.studentId = student.studentId;
             this.email = student.email;
+            this.name = student.name;
 
 
             return this;

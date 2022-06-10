@@ -15,7 +15,6 @@ public class StudentAddress {
 
     private StudentAddress(){}
 
-    //public StudentAddress(Builder builder) {}
 
     public String getStudentId() {return studentId;}
 }

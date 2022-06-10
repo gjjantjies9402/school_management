@@ -1,12 +1,12 @@
 package za.ac.cput.Domain;
 
-public class city {
+public class City {
      public String cityId;
      public String cityName;
    //Country country = new Country;
 
    //Constructor
-   private city(Builder builder){
+   private City(Builder builder){
       this.cityId = builder.cityId;
       this.cityName = builder.cityName;
   }
@@ -52,15 +52,15 @@ public class city {
             return this;
         }
 
-        public Builder copy(city citi){
+        public Builder copy(City citi){
             this.cityId = citi.cityId;
             this.cityName = citi.cityName;
 
             return this;
         }
 
-        public city build(){
-            return new city(this);
+        public City build(){
+            return new City(this);
 
         }
     }

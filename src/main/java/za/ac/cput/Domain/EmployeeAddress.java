@@ -1,10 +1,10 @@
 package za.ac.cput.Domain;
 
-public class employeeAddress {
+public class EmployeeAddress {
     public String staffId;
     //Address address = new Address;
 
-    private employeeAddress(Builder builder){
+    private EmployeeAddress(Builder builder){
         this.staffId = builder.staffId;
     }
 
@@ -31,14 +31,14 @@ public class employeeAddress {
             return this;
         }
 
-        public Builder copy(employeeAddress empAdd){
+        public Builder copy(EmployeeAddress empAdd){
             this.staffId = empAdd.staffId;
 
             return  this;
         }
 
-        public employeeAddress build(){
-            return new employeeAddress(this);
+        public EmployeeAddress build(){
+            return new EmployeeAddress(this);
         }
     }
 }

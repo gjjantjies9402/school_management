@@ -10,8 +10,15 @@
 package za.ac.cput.Factory;
 
 import za.ac.cput.Domain.Student;
+import za.ac.cput.Domain.Name;
 
 public class StudentFactory {
 
-    //public static Student buildStudent()
+    public static Student buildStudent(String studentId, String email, Name name) {
+        return new Student.Builder()
+                .studentId(studentId)
+                .email(email)
+                .name(name)
+                .build();
+    }
 }

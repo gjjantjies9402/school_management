@@ -7,16 +7,14 @@
  */
 
 package za.ac.cput.Domain;
-import za.ac.cput.Domain.student;
 
-public class studentAddress {
+public class StudentAddress {
 
     private String studentId;
 
 
-    private studentAddress(){}
+    private StudentAddress(){}
 
-    //public studentAddress(Builder builder) {}
 
     public String getStudentId() {return studentId;}
 }

@@ -10,7 +10,7 @@ import za.ac.cput.Domain.City;
  * */
 public class AddressFactory {
 
-    public static Address createAddress(String unitNumber, String complexName, String streetNumber, String streetName, String postalCode, City city)
+    public static Address createAddress(String unitNumber, String complexName, String streetNumber, String streetName, int postalCode, City city)
 
     {
 

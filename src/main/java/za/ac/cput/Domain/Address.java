@@ -7,7 +7,8 @@ package za.ac.cput.Domain;
  * */
 public class Address {
 
-    private String unitNumber, complexName, streetNumber, streetName, postalCode;
+    private String unitNumber, complexName, streetNumber, streetName;
+    private int  postalCode;
     private City city;
 
     private Address(){}
@@ -39,7 +40,7 @@ public class Address {
         return streetName;
     }
 
-    public String getPostalCode() {
+    public int getPostalCode() {
         return postalCode;
     }
 
@@ -61,7 +62,8 @@ public class Address {
 
     public static class Builder{
 
-        private String unitNumber, complexName, streetNumber, streetName, postalCode;
+        private String unitNumber, complexName, streetNumber, streetName;
+        private int  postalCode;
         private City city;
 
 
@@ -84,7 +86,7 @@ public class Address {
             return this;
         }
 
-        public Builder setPostalCode(String postalCode) {
+        public Builder setPostalCode(int postalCode) {
             this.postalCode = postalCode;
             return this;
         }

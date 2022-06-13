@@ -1,14 +1,15 @@
 package za.ac.cput.Domain;
 
 public class City {
-     public String cityId;
-     public String cityName;
-   //Country country = new Country;
+    private String cityId;
+    private String cityName;
+    private Country country;
 
    //Constructor
    private City(Builder builder){
       this.cityId = builder.cityId;
       this.cityName = builder.cityName;
+      this.country = builder.country;
   }
 
   //Getters and Setters
@@ -28,12 +29,23 @@ public class City {
         this.cityName = cityName;
     }
 
+    public Country getCountry() {
+        return country;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
+    }
+
     //Tostring
+
+
     @Override
     public String toString() {
-        return "city{" +
+        return "City{" +
                 "cityId='" + cityId + '\'' +
                 ", cityName='" + cityName + '\'' +
+                ", country=" + country +
                 '}';
     }
 
@@ -41,6 +53,7 @@ public class City {
     public static class Builder{
         private String cityId;
         private String cityName;
+        private Country country;
 
         public Builder setCityId(String cityId){
             this.cityId = cityId;
@@ -52,9 +65,15 @@ public class City {
             return this;
         }
 
+        public Builder setCountry(Country country){
+            this.country = country;
+            return this;
+        }
+
         public Builder copy(City citi){
             this.cityId = citi.cityId;
             this.cityName = citi.cityName;
+            this.country = citi.country;
 
             return this;
         }

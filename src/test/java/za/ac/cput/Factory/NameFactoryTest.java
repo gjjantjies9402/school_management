@@ -12,7 +12,7 @@ class NameFactoryTest {
 
         Name name = NameFactory.createName("Buko", "BK", "Ramncwana");
         assertNotNull(name);
-        System.out.println("Name Created: "+name);
+//        System.out.println("Name Created: "+name);
     }
 
 

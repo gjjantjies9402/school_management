@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import za.ac.cput.Domain.Address;
 
 @Repository
-public interface IAddressRepository extends JpaRepository<Address,String> {
+public interface IAddressRepository extends JpaRepository <Address, String> {
 
 }

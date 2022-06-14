@@ -1,5 +1,10 @@
 package za.ac.cput.Domain;
-
+/**
+ * Author: Mziyanda Mwanda 215133765
+ * POJO City.java
+ *  City Entity file to be implemented
+ * Created: 10/6/2022
+ * */
 public class City {
     public String cityId;
     private String cityName;

@@ -1,5 +1,10 @@
 package za.ac.cput.Repository.impl;
-
+/**
+ * Author: Mziyanda Mwanda 215133765
+ * POJO CityRepository.java
+ *  City Repository file to be implemented
+ * Created: 12/6/2022
+ * */
 import org.springframework.stereotype.Repository;
 import za.ac.cput.Domain.City;
 import za.ac.cput.Repository.Interfaces.ICityRepository;

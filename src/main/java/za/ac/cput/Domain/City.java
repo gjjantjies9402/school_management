@@ -1,7 +1,7 @@
 package za.ac.cput.Domain;
 
 public class City {
-    private String cityId;
+    public String cityId;
     private String cityName;
     private Country country;
 

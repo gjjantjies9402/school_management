@@ -28,10 +28,7 @@ public class Country {
 
     @Override
     public String toString() {
-        return "Country{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                '}';
+        return name + ' ' + id  ;
     }
 
     public static class Builder {

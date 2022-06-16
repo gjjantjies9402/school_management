@@ -47,11 +47,8 @@ public class City {
 
     @Override
     public String toString() {
-        return "City{" +
-                "cityId='" + cityId + '\'' +
-                ", cityName='" + cityName + '\'' +
-                ", country=" + country +
-                '}';
+        return  cityId + ' ' + cityName +
+                '\n'  + country ;
     }
 
     //Builder Pattern Class

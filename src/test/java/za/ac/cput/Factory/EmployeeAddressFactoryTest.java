@@ -15,6 +15,6 @@ class EmployeeAddressFactoryTest {
                 CountryFactory.createCountry("ZAR", "South Africa"))));
 
         assertNotNull(empAddress);
-        System.out.println("Employee Address: " + '\n' + empAddress);
+        System.out.println(empAddress);
     }
 }

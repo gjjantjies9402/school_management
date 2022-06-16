@@ -17,5 +17,6 @@ class CountryFactoryTest {
         Country country = CountryFactory.createCountry("ZAR", "South Africa");
         System.out.println(country.toString());
         assertNotNull(country);
+
     }
 }

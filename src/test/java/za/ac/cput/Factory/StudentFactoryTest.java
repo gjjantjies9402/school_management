@@ -11,7 +11,7 @@ class StudentFactoryTest {
     void buildStudent() {
         Student student = StudentFactory.buildStudent("Mso101", "mso101@mycput.ac.za", NameFactory.createName("Buko", "BK", "Ramncwana"));
         assertNotNull(student);
-        System.out.println("Student: " + student);
+        System.out.println(student);
 
     }
 }

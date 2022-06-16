@@ -32,10 +32,9 @@ public class EmployeeAddress {
 
     @Override
     public String toString() {
-        return "EmployeeAddress{" +
-                "staffId='" + staffId + '\'' +
-                ", address=" + address +
-                '}';
+        return "Employee :" +
+                  staffId + '\n' +
+                address ;
     }
 
     public static class Builder{

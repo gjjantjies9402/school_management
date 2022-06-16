@@ -22,11 +22,9 @@ public class Name {
 
     @Override
     public String toString() {
-        return "Name{" +
-                "firstName='" + firstName + '\'' +
-                ", middleName='" + middleName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                '}';
+        return  firstName + ' ' +
+                middleName + ' ' +
+                lastName;
     }
 
     public String getFirstName() {

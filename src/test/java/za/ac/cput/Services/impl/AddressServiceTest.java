@@ -1,55 +1,59 @@
-//package za.ac.cput.Services.impl;
+package za.ac.cput.Services.impl;
+
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.springframework.beans.factory.annotation.Autowired;
+import za.ac.cput.Domain.Address;
+import za.ac.cput.Domain.City;
+import za.ac.cput.Domain.Country;
+import za.ac.cput.Factory.AddressFactory;
+import za.ac.cput.Factory.CityFactory;
+import za.ac.cput.Factory.CountryFactory;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+@TestMethodOrder(MethodOrderer.MethodName.class)
+class AddressServiceTest {
+
+    @Autowired
+    private static AddressService service = AddressService.getService();
+    private static Country country = CountryFactory.createCountry("USA", "United States of America");
+    private static City city = CityFactory.createCity("ALB", "A Town", country);
+    private static Address address = AddressFactory.createAddress("35","Tafelsig","45","Alps Street",7785, city);
+
+    @Test
+    void a_create() {
+        Address create = service.create(address);
+        assertEquals(create.getUnitNumber(),address.getUnitNumber());
+        System.out.println("Created from address: " + create);
+    }
+
+    @Test
+    void b_read() {
+        Address read = service.read(address.getUnitNumber());
+        assertNotNull(read,"read my address");
+        System.out.println(read);
+    }
+
+
+    @Test
+    void c_update() {
+        Address updated = new Address.Builder().copy(address).setStreetName("That").build();
+        updated = service.update(updated);
+        assertNotEquals(updated.getStreetName(), address.getStreetName());
+        System.out.println(updated);
+    }
+
+    @Test
+    void d_getAll() {
+        assertEquals(service.getAll().size(),1);
+        System.out.println(service.getAll());
+    }
 //
-//import org.junit.jupiter.api.MethodOrderer;
-//import org.junit.jupiter.api.Test;
-//import org.junit.jupiter.api.TestMethodOrder;
-//import za.ac.cput.Domain.Address;
-//import za.ac.cput.Factory.AddressFactory;
-//import za.ac.cput.Factory.CityFactory;
-//import za.ac.cput.Factory.CountryFactory;
-//import za.ac.cput.Repository.Interfaces.IAddressRepository;
-//import za.ac.cput.Services.Interfaces.IAddressService;
-//
-//import static org.junit.jupiter.api.Assertions.*;
-//@TestMethodOrder(MethodOrderer.MethodName.class)
-//
-//class AddressServiceTest {
-//
-//    private static IAddressService service = AddressService.getService();
-//
-//    private static Address address = AddressFactory.createAddress("35","Tafelsig","45","Alps Street",7785,
-//            CityFactory.createCity("CPT", "Cape Town", CountryFactory.createCountry("ZAR", "South Africa"))
-//    );
-//    //instantiate factory
-//
-//    @Test
-//    void a_create() {
-//        Address create = service.create(address);
-//        assertEquals(address.getUnitNumber(), create.getUnitNumber());
-//        System.out.println("Created: " + create);
-//    }
-//    @Test
-//    void b_read() {
-//        Address read = service.read(address.getCity().getCityId());
-//        assertNotNull(read);
-//        System.out.println("Read: " + read);
-//    }
-//    @Test
-//    void c_update() {
-//        Address update = new Address.Builder().copy(address).setPostalCode(7898).build();
-//        update = service.update(update);
-//        zassertEquals(address.getCity().getCityId(), update.getCity().getCityId());
-//        System.out.println("Updated: " + update);
-//    }
-//    @Test
-//    void d_getAll() {
-//        assertEquals(1, service.getAll().size());
-//        System.out.println("All Addresses: " + service.getAll());
-//    }
-//    @Test
-//    void e_delete() {
-//        boolean delete = service.delete(address.getCity().getCityId());
-//        assertTrue(delete);
-//        System.out.println("Deleted: " + delete);
-//    }
-//}
+    @Test
+    void e_delete() {
+        boolean delete = service.delete(address.getUnitNumber());
+        assertTrue(delete);
+    }
+}

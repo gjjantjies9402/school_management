@@ -37,10 +37,9 @@ public class Student {
     @Override
     public String toString()
     {
-        return "Student ID {" + studentId +
-                "}, Email {" + email +
-                "}, Name {" + name +
-                "}";
+        return "Student ID : " + studentId + "\n"+
+        "Email :" + email + "\n" +
+        "Name :" + name ;
     }
 
     public static class Builder {

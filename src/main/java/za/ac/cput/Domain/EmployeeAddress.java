@@ -1,5 +1,10 @@
 package za.ac.cput.Domain;
-
+/**
+ * Author: Mziyanda Mwanda 215133765
+ * POJO EmployeeAddress.java
+ *  EmployeeAddress Entity file to be implemented
+ * Created: 10/6/2022
+ * */
 public class EmployeeAddress {
     private String staffId;
     private Address address;
@@ -27,10 +32,9 @@ public class EmployeeAddress {
 
     @Override
     public String toString() {
-        return "EmployeeAddress{" +
-                "staffId='" + staffId + '\'' +
-                ", address=" + address +
-                '}';
+        return "Employee :" +
+                  staffId + '\n' +
+                address ;
     }
 
     public static class Builder{

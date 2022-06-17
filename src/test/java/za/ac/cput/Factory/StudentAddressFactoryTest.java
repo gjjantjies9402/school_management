@@ -12,9 +12,6 @@ public class StudentAddressFactoryTest {
     @Test
     void buildStudentAddress() {
         City cape = null;
-        StudentAddress studentAddress = StudentAddressFactory.buildStudentAddress("Mso101",
-                AddressFactory.createAddress("35", "Tafelsig","45",
-                        "Alps Street",7785,cape));
         assertNotNull(studentAddress);
         System.out.println("Student Address" + studentAddress);
     }

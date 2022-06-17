@@ -1,7 +1,12 @@
 package za.ac.cput.Domain;
-
+/**
+ * Author: Mziyanda Mwanda 215133765
+ * POJO City.java
+ *  City Entity file to be implemented
+ * Created: 10/6/2022
+ * */
 public class City {
-    private String cityId;
+    public String cityId;
     private String cityName;
     private Country country;
 
@@ -42,11 +47,8 @@ public class City {
 
     @Override
     public String toString() {
-        return "City{" +
-                "cityId='" + cityId + '\'' +
-                ", cityName='" + cityName + '\'' +
-                ", country=" + country +
-                '}';
+        return  cityId + ' ' + cityName +
+                '\n'  + country ;
     }
 
     //Builder Pattern Class

@@ -30,9 +30,8 @@ public class StudentAddress {
 
     @Override
     public String toString() {
-        return "Student ID{" + studentId +
-                "}, Address{" + address +
-                "}";
+        return "Student ID : " + studentId + "\n" +
+                 address ;
     }
 
 

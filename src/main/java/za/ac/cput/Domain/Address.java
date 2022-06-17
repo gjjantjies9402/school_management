@@ -50,14 +50,14 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address{" +
-                "unitNumber='" + unitNumber + '\'' +
-                ", complexName='" + complexName + '\'' +
-                ", streetNumber='" + streetNumber + '\'' +
-                ", streetName='" + streetName + '\'' +
-                ", postalCode='" + postalCode + '\'' +
-                ", city=" + city +
-                '}';
+        return "Address : " +'\n'+
+                 unitNumber + ' ' +
+                streetName + '\n' +
+                complexName + '\n' +
+                streetNumber + '\n' +
+                postalCode + '\n' +
+                city ;
+
     }
 
     public static class Builder{

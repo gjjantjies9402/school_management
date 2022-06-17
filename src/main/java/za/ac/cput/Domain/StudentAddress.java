@@ -10,12 +10,14 @@
 package za.ac.cput.Domain;
 
 
+import za.ac.cput.Repository.impl.StudentAddressRepository;
+
 public class StudentAddress {
 
     private String studentId;
     private Address address;
 
-    private StudentAddress(){}
+    public StudentAddress(){}
 
     public StudentAddress(Builder builder) {
         this.studentId = builder.studentId;
@@ -31,6 +33,7 @@ public class StudentAddress {
         return "Student ID : " + studentId + "\n" +
                  address ;
     }
+
 
     public static class Builder {
         private String studentId;

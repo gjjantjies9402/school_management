@@ -1,3 +1,4 @@
+/*
 package za.ac.cput.Services.impl;
 
 import org.springframework.stereotype.Service;
@@ -30,9 +31,10 @@ public class StudentAddressService implements IStudentAddressService {
     public StudentAddress update(StudentAddress studentAddress) {return this.studentAddressRepository.update(studentAddress);}
 
     @Override
-    public void delete(String s) {this.studentAddressRepository.delete(s);}
+    public boolean delete(String s) {this.studentAddressRepository.delete(s); return true}
 
 
 
 }
 
+*/

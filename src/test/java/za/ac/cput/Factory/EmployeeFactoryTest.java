@@ -1,7 +1,7 @@
 /**
  * EmployeeFactory.java
  * Author: Nikitha Mbokotwana
- * Question 2: Implemenation of Employee factory
+ * Question 2: Implemenation of Employee factory Test
  * Group: 28
  * Created: 10/6/2022
  * */
